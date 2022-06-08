@@ -1,0 +1,48 @@
+COMO EJECUTAR LARAVEL SIN PHP ARTISAN:
+- https://stackoverflow.com/a/48348066
+
+CREAR VISTA, CONTROLADOR Y MODELO:
+----------------------------------
+        Ejem: https://laraveldaily.com/create-controller-model-one-artisan-command/
+
+	php artisan make:model Customer
+	php artisan make:controller CustomersController --resource
+
+
+	ESTE EQUIVALE A LOS DOS , LARAVEL REALMENTE LE PREGUNTARÁ SI DESEA GENERAR EL MODELO:
+	php artisan make:controller CustomersController --model=Customer
+
+
+COMO PUEDO VER MI PROYECTO LARAVEL EN UNA RED LOCAL:
+----------------------------------------------------
+        * EN HOST PONER LA IP DE TU PC
+        * EN PORT DEJARLO ASI
+        php artisan serve --host=192.168.0.105 --port=8000
+
+
+CREAR TABLA EN LARAVEL:
+-----------------------
+        * EJECUTAR ESTE COMANDO PARA CREAR UNA MIGRACION Y CREAR UNA TABLA
+        php artisan make:migration create_NombreDeLaTabla_table
+
+        * MIGRAMOS LAS TABLAS CREADAS
+        php artisan migrate
+
+        * SABER CUANTAS TABLAS SE MIGRARON
+        php artisan migrate:status
+
+
+LIMPIAR CACHE:
+--------------
+
+        php artisan cache:clear
+
+        php artisan view:clear
+
+        php artisan route:cache
+
+        php artisan config:cache
+
+        php artisan optimize
+
+        php artisan optimize:clear
